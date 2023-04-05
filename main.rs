@@ -20,6 +20,7 @@ fn main() {
         Add { text } => tasks::add_task(journal_file, Task::new(text)),
         List => tasks::list_tasks(journal_file),
         ListTask{position} => tasks::list_a_task(journal_file,position),
+        RemoveTask{position}=> tasks::remove_a_task(journal_file, position),
         Done { position } => tasks::complete_task(journal_file, position),
     }
     .expect("Failed to perform action")

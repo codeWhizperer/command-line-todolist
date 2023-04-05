@@ -17,6 +17,10 @@ pub enum Action {
         #[structopt()]
         position: usize,
     },
+    RemoveTask {
+        #[structopt()]
+        position: usize,
+    },
     List,
 }
 
